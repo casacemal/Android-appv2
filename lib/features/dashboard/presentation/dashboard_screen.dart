@@ -23,7 +23,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
-    _loadPhoneIP();
+    // _loadPhoneIP(); // Bu satırı kaldırıyoruz
   }
 
   Future<void> _loadPhoneIP() async {
@@ -172,7 +172,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) =>
+                    builder: (_)
+                        =>
                         EmergencyRecoveryScreen(adbClient: _adbClient),
                   ),
                 ),
